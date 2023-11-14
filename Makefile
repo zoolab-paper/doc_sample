@@ -1,27 +1,22 @@
 # default: acm template -> generate main_acm.pdf
-# make [ acm | acmj | ieee | ieeej ]
+# make TARGET=(acm|acmj|ieee|ieeej|usenix|ndss)
 
-default: acm
+TARGET	?= acm
+ALL	= acm acmj ieee ieeej usenix ndss
 
-all: acm acmj ieee ieeej usenix ndss
+default:
+	make main_$(TARGET)
 
-acm:
-	latexmk -pdf main_$@
+all:
+	@for a in $(ALL); do make TARGET=$$a; done
 
-acmj:
-	latexmk -pdf main_$@
-
-ieee:
-	latexmk -pdf main_$@
-
-ieeej:
-	latexmk -pdf main_$@
-
-usenix:
-	latexmk -pdf main_$@
-
-ndss:
-	latexmk -pdf main_$@
+main_%:
+	latexmk -pdf $@
 
 clean:
+	latexmk -C main_$(TARGET)
 	rm -f *.aux *.bbl *.blg *.log *.pdf *.out *.fdb_latexmk *.fls
+
+cleanall:
+	@for a in $(ALL); do make clean TARGET=$$a; done
+
