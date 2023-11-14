@@ -1,0 +1,72 @@
+
+% customized
+\usepackage[utf8]{inputenc}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{graphicx}
+
+\usepackage{pifont}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\usepackage{algpseudocode}
+\usepackage{enumitem}
+\usepackage{tikz}
+
+\usepackage{graphicx}
+\graphicspath{{images/}{figures/}}
+
+%%% choose from either subfigure, or caption + subcaption
+%\usepackage{subfigure}
+%% \begin{figure}
+%%   \subfigure[caption]{
+%       \include ...
+%       \label
+%    }
+%% \end{figure}
+\usepackage{caption}
+\usepackage{subcaption}
+%% \begin{figure}
+%%   \begin{subfigure}[]{.8\columnwidth}
+%%   \include ...
+%%   \label ...
+%%   \caption{...}
+%%   \end{subfigure}
+%% \end{figure}
+
+\usepackage{listings}
+\usepackage{color}
+\lstset{
+  basicstyle=\footnotesize\ttfamily,
+  frame=none,	% none, single
+  numbers=left,
+  language=C,
+  numbersep=5pt,
+  numberstyle=\footnotesize\color{black},
+  tabsize=2
+}
+% xleftmargin=0.25in
+
+%% tikz: circled texts
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{\node[shape=circle,draw,inner sep=1pt] (char) {\scriptsize #1};}}
+
+%% custom editing commands
+\newcommand{\todo}[1]{\textcolor{red}{[TODO: #1]}}
+
+%% system name
+\def\sys{System Name\xspace}
+
+%% chinese support:
+%%%% 1. only work with xeLaTeX (instead of pdfLaTeX)
+%%%% 2. does not work with the USENIX template
+%%%% 3. simply type UTF-8 traditional chinese characters in the document
+%%%% 4. to build, use 'latexmk -pdfxe'
+\iffalse	% iffalse or iftrue
+\usepackage[BoldFont, SlantFont, CJKchecksingle, CJKmath=true]{xeCJK}
+\setCJKmainfont{AR PL KaitiM Big5}
+\setCJKsansfont{AR PL Mingti2L Big5}
+\XeTeXlinebreaklocale "zh"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\fi
+

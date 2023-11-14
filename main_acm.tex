@@ -1,0 +1,101 @@
+\documentclass[sigconf]{acmart}
+\usepackage[utf8]{inputenc}
+
+\input{packages}
+
+\AtBeginDocument{%
+  \providecommand\BibTeX{{%
+    \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
+
+\setcopyright{none} % No copyright notice required for submissions
+\acmConference[Anonymous Submission to ACM CCC 2018]{ACM Conference on CCC}{Due 8 May 2023}{Oakland, USA}
+\copyrightyear{2023}
+\acmYear{2023}
+
+\settopmatter{printacmref=false, printccs=true, printfolios=true} % We want page numbers on submissions
+%\settopmatter{printacmref=false} % Removes citation information below abstract
+\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+\pagestyle{plain} % removes running headers
+
+\begin{document}
+
+\title{Paper Title}
+
+\iffalse
+\author{Anonymous Authors}
+\authornotemark[1]
+\email{anonymous@institution.com}
+\affiliation{%
+  \institution{Anonymous Institution}
+  \city{Anonymous City}
+  \country{Anonymous Country}
+%  \postcode{43017-6221}
+}
+\fi
+
+%\iffalse
+\author{Your Name}
+\authornotemark[1]
+\email{email@nycu.edu.tw}
+\affiliation{%
+  \institution{National Yang Ming Chiao Tung University}
+  \city{Hsinchu}
+  \country{Taiwan}
+%  \postcode{30010}
+}
+
+\author{Chun-Ying Huang}
+\authornotemark[1]
+\email{chuang@cs.nycu.edu.tw}
+\affiliation{%
+  \institution{National Yang Ming Chiao Tung University}
+  \city{Hsinchu}
+  \country{Taiwan}
+%  \postcode{30010}
+}
+%\fi
+
+\begin{CCSXML}
+<ccs2012>
+<concept>
+<concept_id>10002978.10002997.10002998</concept_id>
+<concept_desc>Security and privacy~Malware and its mitigation</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002978.10002997.10002999</concept_id>
+<concept_desc>Security and privacy~Intrusion detection systems</concept_desc>
+<concept_significance>300</concept_significance>
+</concept>
+<concept>
+<concept_id>10002978.10003006.10011634</concept_id>
+<concept_desc>Security and privacy~Vulnerability management</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+<concept>
+<concept_id>10002978.10003022</concept_id>
+<concept_desc>Security and privacy~Software and application security</concept_desc>
+<concept_significance>500</concept_significance>
+</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Malware and its mitigation}
+\ccsdesc[300]{Security and privacy~Intrusion detection systems}
+\ccsdesc[500]{Security and privacy~Vulnerability management}
+\ccsdesc[500]{Security and privacy~Software and application security}
+
+\begin{abstract}
+\input{abstract}
+\end{abstract}
+
+\keywords{Keyword1, Keyword2, Keyword3}
+
+\maketitle
+
+\input{main}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{main}
+
+\end{document}
