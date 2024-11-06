@@ -8,11 +8,14 @@
 \usepackage{pifont}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\let\Bbbk\relax         % avoid amssymb conflicting with other modern pkgs
+\usepackage{amssymb}    % for \varnothing
 \usepackage{algorithm}
 \usepackage{algorithmicx}
 \usepackage{algpseudocode}
 \usepackage{enumitem}
 \usepackage{tikz}
+\usepackage{url}
 
 \usepackage{graphicx}
 \graphicspath{{images/}{figures/}}
@@ -35,6 +38,25 @@
 %%   \end{subfigure}
 %% \end{figure}
 
+% NEW coding style
+%% need python pygments package: brew install pygments
+\usepackage{minted}
+\usemintedstyle{manni}
+\renewcommand\theFancyVerbLine{\footnotesize\arabic{FancyVerbLine}}
+\setminted{
+    mathescape,
+    frame=none,
+    framesep=2mm,
+    fontsize=\footnotesize,
+    linenos,
+    numbersep=5pt,
+    numbers=left,
+    tabsize=2,
+    autogobble,
+    xleftmargin=0.4cm,
+}
+
+% OLD coding style
 \usepackage{listings}
 \usepackage{color}
 \lstset{

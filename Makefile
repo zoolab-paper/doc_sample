@@ -11,11 +11,12 @@ all:
 	@for a in $(ALL); do make TARGET=$$a; done
 
 main_%:
-	latexmk -pdf $@
+	latexmk -pdf -shell-escape $@
 
 clean:
 	latexmk -C main_$(TARGET)
 	rm -f *.aux *.bbl *.blg *.log *.pdf *.out *.fdb_latexmk *.fls
+	rm -rf ./_minted-*
 
 cleanall:
 	@for a in $(ALL); do make clean TARGET=$$a; done
