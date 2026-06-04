@@ -1,4 +1,4 @@
-\documentclass[sigconf]{acmart}
+\documentclass[sigconf,balance=false]{acmart}
 \usepackage[utf8]{inputenc}
 
 \input{packages}
@@ -7,15 +7,18 @@
   \providecommand\BibTeX{{%
     \normalfont B\kern-0.5em{\scshape i\kern-0.25em b}\kern-0.8em\TeX}}}
 
-\setcopyright{none} % No copyright notice required for submissions
-\acmConference[Anonymous Submission to ACM CCC 2018]{ACM Conference on CCC}{Due 8 May 2023}{Oakland, USA}
-\copyrightyear{2023}
-\acmYear{2023}
+\setcopyright{acmlicensed} %% CCS: DO NOT REMOVE
+\copyrightyear{2026}
+\acmYear{2026}
+\acmDOI{XXXXXXX.XXXXXXX} %% CCS: DO NOT REMOVE
+\acmConference[Anonymous Submission to ACM CCS 2026]{ACM Conference on CCC}{Due 29 April 2026}{The Hague, The Netherlands}
+\acmConference[CCS '26]{ACM Conference on Computer and Communications Security}{November 15--19, 2026}{The Hague, The Netherlands}  %% CCS: DO NOT REMOVE
+\acmISBN{978-1-4503-XXXX-X/2018/06}  %% CCS: DO NOT REMOVE
 
-\settopmatter{printacmref=false, printccs=true, printfolios=true} % We want page numbers on submissions
+%\settopmatter{printacmref=true, printccs=true, printfolios=true} % We want page numbers on submissions
 %\settopmatter{printacmref=false} % Removes citation information below abstract
-\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
-\pagestyle{plain} % removes running headers
+%\renewcommand\footnotetextcopyrightpermission[1]{} % removes footnote with conference information in first column
+%\pagestyle{plain} % removes running headers
 
 \begin{document}
 
@@ -97,5 +100,9 @@
 
 \bibliographystyle{ACM-Reference-Format}
 \bibliography{main}
+
+\appendix
+
+\input{ethics}
 
 \end{document}
