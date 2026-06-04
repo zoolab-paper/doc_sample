@@ -1,6 +1,8 @@
-\documentclass[conference,10pt]{IEEEtran}
+\documentclass[conference,compsoc]{IEEEtran}
 
 \input{packages}
+
+\usepackage{hyperref}
 
 \begin{document}
 \title{\sys: Paper Title}
@@ -23,6 +25,10 @@
 \maketitle
 
 \begin{abstract}
+% remove this prior to submission
+\thispagestyle{plain}
+\pagestyle{plain}
+%
 \input{abstract}
 \end{abstract}
 
@@ -30,5 +36,7 @@
 
 \bibliographystyle{IEEEtran}
 \bibliography{main}
+
+%\appendices
 
 \end{document}
